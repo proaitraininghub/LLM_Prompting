@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 17 -- A Worked Example: Improving a Bad Prompt Step by Step
+Module 17 -- A Worked Example: Improving a Bad Prompt Step by Step
 Live-demo script.
 
 Run:
