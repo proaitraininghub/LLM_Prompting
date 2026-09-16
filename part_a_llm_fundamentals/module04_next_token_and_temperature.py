@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 4 -- Next-Token Prediction and Temperature
+Module 04: Next-Token Prediction and Temperature
 Live-demo script.
 
 Run:

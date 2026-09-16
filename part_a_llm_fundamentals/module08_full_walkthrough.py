@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 8 -- A Worked Walkthrough: Tracing One Prompt Start to Finish
+Module 8 -- A Worked Walkthrough: Tracing One Prompt Start to Finish
 Live-demo script.
 
 Run:

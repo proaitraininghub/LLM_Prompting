@@ -1,5 +1,5 @@
 """
-Tokens and Tokenization: How Text Becomes Numbers
+Module 02 : Tokens and Tokenization: How Text Becomes Numbers
 
 
 Run:

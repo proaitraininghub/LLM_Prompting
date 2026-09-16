@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 5 -- The Context Window: The Model's Short-Term Memory
+Module 5 -- The Context Window: The Model's Short-Term Memory
 Live-demo script.
 
 Run:

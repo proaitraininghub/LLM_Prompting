@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 7 -- What LLMs Are Good At and Bad At
+Module 7 -- What LLMs Are Good At and Bad At
 Live-demo script.
 
 Run:

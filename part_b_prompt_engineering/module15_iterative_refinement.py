@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 15 -- Iterative Refinement
+Module 15 -- Iterative Refinement
 Live-demo script.
 
 Run:

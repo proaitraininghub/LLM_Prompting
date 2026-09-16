@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 10 -- The Anatomy of a Good Prompt
+Module 10 -- The Anatomy of a Good Prompt
 (Role, Task, Context, Format, Constraints)
 Live-demo script.
 

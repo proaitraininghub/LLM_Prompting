@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 13 -- Role and Persona Prompting
+Module 13 -- Role and Persona Prompting
 Live-demo script.
 
 Run:

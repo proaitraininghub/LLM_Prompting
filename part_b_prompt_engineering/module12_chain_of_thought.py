@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 12 -- Chain-of-Thought Prompting
+Module 12 -- Chain-of-Thought Prompting
 Live-demo script.
 
 Run:

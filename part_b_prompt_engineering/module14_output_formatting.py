@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 14 -- Output Formatting
+Module 14 -- Output Formatting
 Live-demo script.
 
 Run:

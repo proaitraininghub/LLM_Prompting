@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 3 -- Embeddings: How Meaning Becomes Numbers
+Module03 : Embeddings: How Meaning Becomes Numbers
 Live-demo script.
 
 Run:

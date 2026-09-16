@@ -1,5 +1,5 @@
 """
-Teaching Guide Module 11 -- Zero-Shot vs. Few-Shot Prompting
+Module 11 -- Zero-Shot vs. Few-Shot Prompting
 Live-demo script.
 
 Run:
