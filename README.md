@@ -1,8 +1,21 @@
 # LLM Fundamentals + Prompt Engineering — Live-Demo Scripts
 
-One small, standalone Python script per teaching stage, each calling your
-real Azure OpenAI / Microsoft Foundry deployment so you can run it live in
-class and let students see actual model output at each concept.
+One small, standalone Python script per teaching stage, so you can run it
+live in class and let students see actual model output at each concept.
+
+**Every script demonstrates its concept two ways, back to back:** first
+against Azure OpenAI / Microsoft Foundry (Option A), then against the plain
+OpenAI API (Option B). Both code paths are always in the file, side by side
+— nothing to toggle. This is deliberate: students see the exact same
+`client.chat.completions.create(...)` call work against two different
+backends, which is a good moment to point out that most LLM application code
+isn't tied to one vendor.
+
+You only need to fill in the credentials for whichever provider(s) you plan
+to demo — see `.env.example`. If you only fill in the Azure section, Option
+A will run fine and Option B will raise a clear "missing environment
+variable" error when it gets to that part; just comment out that line in the
+script's `__main__` block if you don't want to demo it.
 
 Every script's filename and docstring reference the matching module number
 in **LLM_Fundamentals_Teaching_Guide.docx**, so you can pull up the script
@@ -14,11 +27,13 @@ right when you reach that module.
    ```
    pip install -r requirements.txt
    ```
-2. Copy `.env.example` to `.env` and fill in your Foundry project's endpoint,
-   API key, and the deployment names you created in the Azure AI course
-   (Module 4: Deploying Your First Model).
-3. Confirm you have a chat model deployed (e.g. `gpt-4o-mini`) and, if you
-   want to run `module03_embeddings.py`, an embedding model deployed too
+2. Copy `.env.example` to `.env` and fill in:
+   - Your Foundry project's endpoint, API key, and deployment names
+     (Azure AI course, Module 4: Deploying Your First Model) for Option A, and/or
+   - Your OpenAI API key (from platform.openai.com/api-keys) and model names
+     for Option B.
+3. Confirm you have a chat model deployed/available (e.g. `gpt-4o-mini`) and,
+   if you want to run `module03_embeddings.py`, an embedding model too
    (e.g. `text-embedding-3-small`).
 
 ## Running a script
@@ -32,6 +47,8 @@ python part_b_prompt_engineering/module10_anatomy_of_a_good_prompt.py
 Each script is self-contained — run it directly, read the printed output
 live with the class, and re-run as many times as you like (several scripts
 are designed to be re-run to show variation, e.g. the temperature demo).
+Output is grouped under "Option A: Azure OpenAI" and "Option B: OpenAI API"
+headers so it's easy to point out which backend produced which block.
 
 ## Script map
 

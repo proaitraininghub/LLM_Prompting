@@ -1,6 +1,6 @@
 """
-Teaching Guide Module 2 -- Tokens and Tokenization: How Text Becomes Numbers
-Live-demo script.
+Tokens and Tokenization: How Text Becomes Numbers
+
 
 Run:
     python part_a_llm_fundamentals/module02_tokenization.py
