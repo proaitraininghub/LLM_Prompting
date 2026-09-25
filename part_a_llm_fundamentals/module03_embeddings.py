@@ -35,7 +35,7 @@ from common.client import (
 
 # The words we'll turn into embeddings. Chosen deliberately: king/queen and
 # apple/banana are meaning-related pairs; king/apple and apple/car are not.
-WORDS = ["king", "queen", "man", "woman", "apple", "banana", "car"]
+WORDS = ["king", "queen", "man", "apple", "banana", "car","kingdom","prince","princess","throne","crown","fruit","vehicle","road"]
 
 # Pairs to compare, with our prediction of what should happen written next
 # to each one -- good to read out loud to the class BEFORE running the code.
@@ -45,6 +45,12 @@ PAIRS = [
     ("king", "apple"),    # expect: low similarity -- unrelated
     ("apple", "banana"),  # expect: high similarity -- both fruits
     ("apple", "car"),     # expect: low similarity -- unrelated
+    ("car", "road"),      # expect: high similarity -- related concepts
+    ("king", "kingdom"),  # expect: high similarity -- related concepts
+    ("prince", "princess"), # expect: high similarity -- related concepts
+    ("throne", "crown"),  # expect: high similarity -- related concepts
+    ("fruit", "banana"),  # expect: high similarity -- related concepts
+    ("vehicle", "car"),   # expect: high similarity -- related concepts
 ]
 
 
@@ -99,5 +105,5 @@ def main_openai():
 if __name__ == "__main__":
     main_azure()
     main_openai()
-    print("Live-demo idea: swap in your own word pairs, have the class predict the")
-    print("score before running, then check how close their intuition was.")
+    print("")
+    print(" ")

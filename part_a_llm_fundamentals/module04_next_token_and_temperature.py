@@ -41,7 +41,7 @@ def show_next_token_probabilities(client, deployment):
     likely each one was." This lets us peek at the model's actual
     decision-making instead of only seeing its final choice.
     """
-    prompt = "The sky is"
+    prompt = "My Bike is"
     print(f'=== Next-token probabilities after: "{prompt}" ===\n')
     try:
         response = client.chat.completions.create(
@@ -50,7 +50,7 @@ def show_next_token_probabilities(client, deployment):
             max_tokens=1,       # we only want to see the very next token, not a full sentence
             logprobs=True,      # "yes, include probability information in the response"
             top_logprobs=5,     # "show me the top 5 tokens it considered, not just the winner"
-            temperature=0,      # temperature=0 means "always pick the single most likely token"
+            temperature=1,      # temperature=0 means "always pick the single most likely token"
                                  # (see show_temperature_effect below for what changing this does)
         )
         # Dig into the response structure to get that list of top candidate tokens.
@@ -76,7 +76,7 @@ def show_temperature_effect(client, deployment):
     different temperatures, twice each, so you can watch the variation
     (or lack of it) happen live.
     """
-    prompt = "Write a one-sentence opening line for a mystery novel."
+    prompt = "Write a one-sentence opening line for a India."
     print("\n=== Same prompt, different temperatures (run twice each) ===\n")
     for temp in [0.0, 0.7, 1.2]:
         print(f"--- temperature = {temp} ---")

@@ -76,20 +76,23 @@ def _check_env(required_vars, hint):
 # Option A: Azure OpenAI / Microsoft Foundry
 # ============================================================================
 
-def get_azure_client() -> AzureOpenAI:
+def get_azure_client() -> OpenAI:
     """
-    Builds and returns an AzureOpenAI client -- the object every script
-    uses to actually send a request to the model. Think of this function
-    as "log in to Azure OpenAI and hand me back a ready-to-use connection."
+    Builds and returns a client connected to your Azure AI Foundry resource's
+    newer "v1" OpenAI-compatible endpoint. Some Foundry resources (like yours)
+    only support this v1-style API, not the older Azure-specific "deployments"
+    API that the AzureOpenAI class expects -- so we use the plain OpenAI SDK
+    class instead, pointed at your Azure endpoint's /openai/v1/ path. This is
+    the same client-swap idea shown in module08_swapping_the_client.py.
     """
     _check_env(
         AZURE_REQUIRED_VARS,
         "Copy .env.example to .env and fill in your Azure OpenAI / Foundry project details.",
     )
-    return AzureOpenAI(
-        azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],   # the web address of your Azure resource
-        api_key=os.environ["AZURE_OPENAI_API_KEY"],           # your secret key, proves it's really you
-        api_version=os.environ.get("AZURE_OPENAI_API_VERSION", "2026-01-01-preview"),  # which version of Azure's API to speak
+    endpoint = os.environ["AZURE_OPENAI_ENDPOINT"].rstrip("/")
+    return OpenAI(
+        base_url=f"{endpoint}/openai/v1/",
+        api_key=os.environ["AZURE_OPENAI_API_KEY"],
     )
 
 

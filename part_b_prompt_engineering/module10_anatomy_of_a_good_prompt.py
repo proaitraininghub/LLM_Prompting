@@ -1,7 +1,7 @@
 """
 Module 10 -- The Anatomy of a Good Prompt
 (Role, Task, Context, Format, Constraints)
-Live-demo script.
+
 
 Run:
     python part_b_prompt_engineering/module10_anatomy_of_a_good_prompt.py
@@ -24,7 +24,7 @@ from common.client import (
 )
 
 # A deliberately vague, one-line prompt -- the kind a beginner might write.
-WEAK_PROMPT = "Help me with my math homework."
+WEAK_PROMPT = "Help me with my math homework solve the equation 3x + 7 = 22."
 
 # The same underlying request, rebuilt with five ingredients of a good prompt:
 #   Role        -- who should the model "act as"?

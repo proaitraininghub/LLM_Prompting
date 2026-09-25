@@ -1,15 +1,7 @@
 # LLM Fundamentals + Prompt Engineering — Live-Demo Scripts
 
-One small, standalone Python script per teaching stage, so you can run it
-live in class and let students see actual model output at each concept.
 
-**Every script demonstrates its concept two ways, back to back:** first
-against Azure OpenAI / Microsoft Foundry (Option A), then against the plain
-OpenAI API (Option B). Both code paths are always in the file, side by side
-— nothing to toggle. This is deliberate: students see the exact same
-`client.chat.completions.create(...)` call work against two different
-backends, which is a good moment to point out that most LLM application code
-isn't tied to one vendor.
+
 
 You only need to fill in the credentials for whichever provider(s) you plan
 to demo — see `.env.example`. If you only fill in the Azure section, Option
@@ -17,9 +9,7 @@ A will run fine and Option B will raise a clear "missing environment
 variable" error when it gets to that part; just comment out that line in the
 script's `__main__` block if you don't want to demo it.
 
-Every script's filename and docstring reference the matching module number
-in **LLM_Fundamentals_Teaching_Guide.docx**, so you can pull up the script
-right when you reach that module.
+
 
 ## Setup (do this once)
 
@@ -54,7 +44,7 @@ headers so it's easy to point out which backend produced which block.
 
 ### Part A — LLM Fundamentals
 
-| Script | Teaching Guide Module | What it demonstrates |
+| Script | Guide Module | What it demonstrates |
 |---|---|---|
 | `module02_tokenization.py` | Module 2 | Splitting text into tokens; confirming the count against a real API call |
 | `module03_embeddings.py` | Module 3 | Turning words into vectors; cosine similarity between related/unrelated pairs |
@@ -63,14 +53,11 @@ headers so it's easy to point out which backend produced which block.
 | `module07_strengths_and_weaknesses.py` | Module 7 | A strength (tone rewriting), a weakness (large arithmetic), a hallucination |
 | `module08_full_walkthrough.py` | Module 8 | One prompt traced through tokenization, generation, temperature, and usage |
 
-*(Module 1 "What Is an LLM" and Module 6 "How LLMs Are Trained" are
-conceptual/whiteboard modules — there's no corresponding live-demo script,
-since pretraining/fine-tuning/RLHF aren't things you can demo against a
-deployed model.)*
+
 
 ### Part B — Prompt Engineering
 
-| Script | Teaching Guide Module | What it demonstrates |
+| Script |  Guide Module | What it demonstrates |
 |---|---|---|
 | `module10_anatomy_of_a_good_prompt.py` | Module 10 | Vague prompt vs. Role/Task/Context/Format/Constraints, side by side |
 | `module11_zero_shot_vs_few_shot.py` | Module 11 | Same classification task, zero-shot vs. with two worked examples |

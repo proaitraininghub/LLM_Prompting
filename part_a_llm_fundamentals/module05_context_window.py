@@ -60,7 +60,7 @@ def main(label, client, model):
 
     facts = [
         "My favorite color is teal.",
-        "I have a dog named Biscuit.",
+        "I have a dog",
         "I live in Pune.",
         "My favorite food is dosa.",
     ]
@@ -87,7 +87,4 @@ if __name__ == "__main__":
     main("Option A: Azure OpenAI", get_azure_client(), get_azure_chat_deployment())
     main("Option B: OpenAI API", get_openai_client(), get_openai_chat_model())
 
-    print("Live-demo idea: wrap the fact-adding loop to append hundreds of filler facts,")
-    print("then manually truncate the oldest messages out of `messages` before asking the")
-    print("recall question again -- watch the model fail to recall what got truncated away,")
-    print("even though it answered correctly a moment ago.")
+    print("")
