@@ -72,5 +72,5 @@ def main(label, client, deployment):
 
 
 if __name__ == "__main__":
-    main("Option A: Azure OpenAI", get_azure_client(), get_azure_chat_deployment())
+    #main("Option A: Azure OpenAI", get_azure_client(), get_azure_chat_deployment())
     main("Option B: OpenAI API", get_openai_client(), get_openai_chat_model())

@@ -22,11 +22,10 @@ from common.client import (
     get_openai_client, get_openai_chat_model,
 )
 
-PROBLEM = ("A basket has 3 apples. You add 2 more baskets with 4 apples each, "
-           "then remove 5 apples total. How many apples are left?")
+PROBLEM = ("tell me about indian cricket team")
 
 # Ask for just the final number -- no reasoning shown.
-DIRECT = f"{PROBLEM} Answer with just the number."
+DIRECT = f"{PROBLEM} Answer in 5 statements"
 
 # Ask the model to reason through it out loud first -- this is the whole
 # "chain-of-thought" technique in one sentence: "Think step by step."
@@ -56,7 +55,7 @@ def main(label, client, deployment):
 
 
 if __name__ == "__main__":
-    main("Option A: Azure OpenAI", get_azure_client(), get_azure_chat_deployment())
+    #main("Option A: Azure OpenAI", get_azure_client(), get_azure_chat_deployment())
     main("Option B: OpenAI API", get_openai_client(), get_openai_chat_model())
 
     print("Run both a few times -- direct answers are more likely to be wrong or")
